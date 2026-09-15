@@ -1,48 +1,24 @@
-body {
-    background: #dff5d8;
-    font-family: sans-serif;
-    margin: 0;
-    padding: 20px;
-}
+<div class="role-selector">
+  <button onclick="setRole('toban')">当番</button>
+  <button onclick="setRole('sub')">サブ</button>
+  <button onclick="setRole('ippan')">一般</button>
+</div>
 
-.container {
-    max-width: 480px;
-    margin: auto;
-}
+<div class="container">
+  <h1>勤怠アプリ</h1>
 
-h2 {
-    margin-top: 25px;
-    font-size: 22px;
-}
+  <div id="current-time"></div>
 
-input {
-    width: 100%;
-    padding: 15px;
-    font-size: 22px;
-    margin-top: 5px;
-    border-radius: 8px;
-    border: 1px solid #888;
-}
+  <button id="checkin-btn" onclick="autoCheckIn()">出勤</button>
 
-.label {
-    margin-top: 10px;
-    font-size: 18px;
-}
+  <div class="checkout-area">
+    <label>退勤時間</label>
+    <input type="time" id="checkout-time">
+    <button onclick="manualCheckout()">退勤</button>
+  </div>
 
-.output, .total {
-    width: 100%;
-    padding: 18px;
-    background: white;
-    border-radius: 8px;
-    font-size: 26px;
-    margin-top: 5px;
-    border: 1px solid #666;
-}
+  <div id="work-time"></div>
 
-.total {
-    font-weight: bold;
-    background: #fff8cc;
-}
-#roomTime {
-    display: none;
-}
+  <button onclick="showLog()">ログ</button>
+  <div id="log"></div>
+</div>
