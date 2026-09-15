@@ -1,30 +1,48 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>勤怠アプリ</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+    background: #dff5d8;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
 
-  <div class="container">
-    <h1>勤怠アプリ</h1>
+.container {
+    max-width: 480px;
+    margin: auto;
+}
 
-    <div class="time-box">
-      <p id="nowTime"></p>
-    </div>
+h2 {
+    margin-top: 25px;
+    font-size: 22px;
+}
 
-    <div class="btn-box">
-      <button id="checkInBtn">チェックイン</button>
-      <button id="checkOutBtn">チェックアウト</button>
-    </div>
+input {
+    width: 100%;
+    padding: 15px;
+    font-size: 22px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #888;
+}
 
-    <div class="log-box">
-      <h2>ログ</h2>
-      <ul id="logList"></ul>
-    </div>
-  </div>
+.label {
+    margin-top: 10px;
+    font-size: 18px;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.output, .total {
+    width: 100%;
+    padding: 18px;
+    background: white;
+    border-radius: 8px;
+    font-size: 26px;
+    margin-top: 5px;
+    border: 1px solid #666;
+}
+
+.total {
+    font-weight: bold;
+    background: #fff8cc;
+}
+#roomTime {
+    display: none;
+}
