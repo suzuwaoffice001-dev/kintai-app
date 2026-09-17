@@ -23,9 +23,9 @@ function manualCheckout() {
     return;
   }
 
-  // 1500 → 15:00 に変換
-  if (raw.length === 4 && !raw.includes(":")) {
-    raw = raw.slice(0, 2) + ":" + raw.slice(2);
+  // 1500 → 15:00 に変換（確実に動く版）
+  if (/^\d{4}$/.test(raw)) {
+    raw = raw.substring(0, 2) + ":" + raw.substring(2);
     document.getElementById("end-time").value = raw;
   }
 
