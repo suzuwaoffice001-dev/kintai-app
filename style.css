@@ -34,8 +34,9 @@ body {
   border-radius: 10px;
   background-color: #e0f7fa;
   border: 1px solid #0097a7;
+  width: 100%; /* ← 横幅を揃えて短くする */
 }
-
+  
 .input-block {
   margin-bottom: 25px;
 }
@@ -74,5 +75,16 @@ body {
   .input-block input {
     font-size: 20px;
     padding: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .role-selector {
+    max-width: 260px; /* スマホ用に少し短く */
+    gap: 25px;        /* スマホでは余白を広めに */
+  }
+
+  .role-selector button {
+    font-size: 22px;
+    padding: 16px;
   }
 }
