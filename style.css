@@ -91,3 +91,72 @@ body {
     padding: 16px;
   }
 }
+/* 全体を縦長にして余白を広げる */
+.container {
+  max-width: 500px;      /* 全体を少し大きく */
+  margin: 0 auto;
+  padding: 30px;         /* 余白を広くして縦長に */
+}
+
+/* 入力ブロックを大きくする */
+.input-block {
+  margin-bottom: 30px;   /* 各項目の間を広くする */
+}
+
+.input-block label {
+  font-size: 22px;       /* ラベルを大きく */
+}
+
+.input-block input {
+  font-size: 24px;       /* 入力欄を大きく */
+  padding: 16px;         /* 入力欄の高さを増やす */
+  border-radius: 10px;
+}
+
+/* 当番・サブ・通常ボタンをさらに大きく */
+.role-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;             /* ボタン間の空欄を広く */
+  width: 100%;
+  max-width: 320px;      /* ボタンの横幅を短くして見やすく */
+  margin: 0 auto;
+  margin-bottom: 40px;   /* 通常の下に空欄を追加 */
+}
+
+.role-selector button {
+  font-size: 24px;       /* ボタン文字を大きく */
+  padding: 18px;         /* ボタンを縦長に */
+  border-radius: 12px;
+  background-color: #e0f7fa;
+  border: 1px solid #0097a7;
+  width: 100%;
+}
+
+/* スマホ向けさらに最適化 */
+@media (max-width: 600px) {
+  .container {
+    max-width: 90%;
+    padding: 35px;
+  }
+
+  .role-selector {
+    max-width: 300px;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .role-selector button {
+    font-size: 26px;
+    padding: 20px;
+  }
+
+  .input-block label {
+    font-size: 24px;
+  }
+
+  .input-block input {
+    font-size: 26px;
+    padding: 18px;
+  }
+}
