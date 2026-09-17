@@ -10,18 +10,15 @@
   <div class="input-block">
     <label>出勤時間（自動入力）</label>
     <input type="text" id="start-time" readonly>
-    <button onclick="autoCheckIn()">出勤</button>
   </div>
 
   <div class="input-block">
     <label>退勤時間（1500 → 15:00）</label>
-    <input type="text" id="end-time">
-    <button onclick="manualCheckout()">退勤</button>
+    <input type="text" id="end-time" oninput="manualCheckout()">
   </div>
 
   <div class="input-block">
     <label>合計勤務時間</label>
-    <div id="work-time"></div>
+    <input type="text" id="work-time" readonly>
   </div>
 </div>
-　
