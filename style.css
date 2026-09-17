@@ -19,14 +19,14 @@ body {
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
 .role-selector {
   display: flex;
-  flex-direction: column; /* ←縦並びにする *
-  gap: 10px;
-  margin-bottom: 25px;
+  flex-direction: column; /* 縦並び */
+  gap: 20px; /* ← ボタンの間に空欄を入れる（大きめ余白） */
+  width: 100%;
+  max-width: 300px; /* ボタンの横幅を短くする */
+  margin: 0 auto; /* 中央寄せ */
 }
-
 .role-selector button {
   flex: 1;
   padding: 16px;
