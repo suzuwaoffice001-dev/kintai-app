@@ -54,3 +54,25 @@ body {
   border-radius: 10px;
   border: 1px solid #ccc;
 }
+  
+/* スマホ向け調整 */
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .role-selector button {
+    font-size: 20px;
+    padding: 16px;
+  }
+
+  .input-block label {
+    font-size: 18px;
+  }
+
+  .input-block input {
+    font-size: 20px;
+    padding: 14px;
+  }
+}
