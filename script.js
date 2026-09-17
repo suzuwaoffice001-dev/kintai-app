@@ -1,7 +1,7 @@
 let selectedRole = null;
 let startTime = null;
 
-// 区分選択（押した瞬間に出勤時間を自動入力）
+// 当番・サブ・通常ボタンを押したときの処理
 function setRole(role) {
   selectedRole = role;
 
@@ -14,7 +14,7 @@ function setRole(role) {
   calculateWorkTime(startTime, document.getElementById("end-time").value);
 }
 
-// 退勤（1500 → 15:00 に変換）
+// 退勤時間入力（1500 → 15:00）
 function manualCheckout() {
   let raw = document.getElementById("end-time").value;
 
@@ -34,21 +34,7 @@ function manualCheckout() {
   calculateWorkTime(startTime, raw);
 }
 
-  if (!raw) {
-    document.getElementById("work-time").value = "";
-    return;
-  }
-
-  // 1500 → 15:00 に変換（確実に動く版）
-  if (/^\d{4}$/.test(raw)) {
-  raw = raw.substring(0, 2) + ":" + raw.substring(2);
-  document.getElementById("end-time").value = raw;
-}
-
-  calculateWorkTime(startTime, raw);
-}
-
-// 実労働時間の計算
+// 勤務時間計算
 function calculateWorkTime(start, end) {
   if (!start || !end) return;
 
@@ -66,6 +52,8 @@ function calculateWorkTime(start, end) {
   document.getElementById("work-time").value =
     `${hours}時間 ${minutes}分`;
 }
+
+// Enter キー無効化
 function disableEnter(e) {
   if (e.key === "Enter") {
     e.preventDefault();
