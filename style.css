@@ -26,15 +26,17 @@ body {
   width: 100%;
   max-width: 300px; /* ボタンの横幅を短くする */
   margin: 0 auto; /* 中央寄せ */
+  margin-bottom: 30px; /* ← 通常ボタンの下に空欄を追加 */
 }
 .role-selector button {
   flex: 1;
-  padding: 16px;
+  padding: 14px;
   font-size: 20px;
   border-radius: 10px;
   background-color: #e0f7fa;
   border: 1px solid #0097a7;
   width: 100%; /* ← 横幅を揃えて短くする */
+  box-sizing: border-box;
 }
   
 .input-block {
@@ -59,12 +61,13 @@ body {
 /* スマホ向け調整 */
 @media (max-width: 600px) {
   .container {
-    max-width: 100%;
-    padding: 20px;
+    max-width: 260%;
+    padding: 25px;
+    margin-bottom: 40px; /* 通常ボタンの下の空欄をさらに広く */
   }
 
   .role-selector button {
-    font-size: 20px;
+    font-size: 22px;
     padding: 16px;
   }
 
