@@ -20,7 +20,7 @@
 
   <div class="input-block">
     <label>退勤時間（1500 → 15:00）</label>
-    <input type="text" id="end-time" oninput="manualCheckout()">
+    <input type="text" id="end-time" oninput="manualCheckout()" onkeydown="disableEnter(event)">
   </div>
 
   <div class="input-block">
