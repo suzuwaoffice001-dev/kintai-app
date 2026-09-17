@@ -18,6 +18,22 @@ function setRole(role) {
 function manualCheckout() {
   let raw = document.getElementById("end-time").value;
 
+  // 5桁以上ならエラー
+  if (raw.length >= 5) {
+    alert("数字は4桁までです（例：1500）");
+    document.getElementById("end-time").value = "";
+    return;
+  }
+
+  // 4桁なら 1500 → 15:00 に変換
+  if (/^\d{4}$/.test(raw)) {
+    raw = raw.substring(0, 2) + ":" + raw.substring(2);
+    document.getElementById("end-time").value = raw;
+  }
+
+  calculateWorkTime(startTime, raw);
+}
+
   if (!raw) {
     document.getElementById("work-time").value = "";
     return;
