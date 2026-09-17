@@ -125,8 +125,8 @@ body {
 }
 
 .role-selector button {
-  font-size: 24px;       /* ボタン文字を大きく */
-  padding: 18px;         /* ボタンを縦長に */
+  font-size:32px;       /* ボタン文字を大きく */
+  padding: 26px;         /* ボタンを縦長に */
   border-radius: 12px;
   background-color: #e0f7fa;
   border: 1px solid #0097a7;
@@ -147,17 +147,17 @@ body {
   }
 
   .role-selector button {
-    font-size: 26px;
-    padding: 20px;
+    font-size: 30px;
+    padding: 24px;
   }
 
   .input-block label {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .input-block input {
-    font-size: 26px;
-    padding: 18px;
+    font-size: 32px;
+    padding: 24px;
   }
 }
 .role-selector {
@@ -197,4 +197,30 @@ body {
   border: 3px solid #0077cc;
   padding: 12px;
   border-radius: 10px;
+}
+.role-toban,
+.role-sub,
+.role-normal {
+  border: 4px solid #0077cc;   /* 太めの青枠 */
+  padding: 20px;               /* 枠の内側を広く */
+  border-radius: 14px;         /* 角丸を大きく */
+  font-size: 28px;             /* 文字を大きく */
+  text-align: center;
+  background-color: #f0f8ff;   /* 薄い水色で視認性UP */
+}
+.role-selector button {
+  font-size: 30px;       /* 文字をさらに大きく */
+  padding: 22px;         /* ボタンを縦長に */
+  border-radius: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.input-block label {
+  font-size: 26px;       /* ラベルを大きく */
+}
+
+.input-block input {
+  font-size: 30px;       /* 入力欄の文字を大きく */
+  padding: 20px;         /* 入力欄を縦長に */
+  border-radius: 12px;
 }
