@@ -60,5 +60,5 @@ function calculateWorkTime(start, end) {
   const minutes = diff % 60;
 
   document.getElementById("work-time").textContent =
-    `${hours}時間 ${minutes}分`;
+    `${hours}時間 ${minutes}分`;　
 }
