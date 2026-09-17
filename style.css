@@ -224,3 +224,58 @@ body {
   padding: 20px;         /* 入力欄を縦長に */
   border-radius: 12px;
 }
+.role-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;              /* ← ボタン同士の間隔をもっと広く */
+  width: 100%;
+  max-width: 380px;       /* ← 全体をさらに大きく */
+  margin: 0 auto 60px auto;
+}
+
+.role-toban,
+.role-sub,
+.role-normal {
+  border: 4px solid #0077cc;  /* 太めの青枠 */
+  padding: 28px;              /* 内側をさらに広く */
+  border-radius: 16px;        /* 角丸を大きく */
+  font-size: 34px;            /* 文字をさらに大きく */
+  background-color: #f0f8ff;
+  text-align: center;
+}
+.input-block {
+  margin-bottom: 40px;   /* ← 各項目の間隔を広く */
+}
+
+.input-block label {
+  font-size: 30px;       /* ラベルをさらに大きく */
+}
+
+.input-block input {
+  font-size: 34px;       /* 入力欄の文字をさらに大きく */
+  padding: 26px;         /* 入力欄を縦長に */
+  border-radius: 14px;
+}
+@media (max-width: 600px) {
+  .role-selector {
+    max-width: 340px;
+    gap: 45px;
+    margin-bottom: 70px;
+  }
+
+  .role-toban,
+  .role-sub,
+  .role-normal {
+    font-size: 36px;
+    padding: 30px;
+  }
+
+  .input-block label {
+    font-size: 32px;
+  }
+
+  .input-block input {
+    font-size: 36px;
+    padding: 28px;
+  }
+}
