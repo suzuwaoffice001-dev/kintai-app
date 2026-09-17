@@ -169,7 +169,6 @@ body {
   margin: 0 auto 40px auto;
 
   padding: 20px;                 /* 枠の内側余白 */
-  border: 3px solid #0077cc;     /* 青の太線 */
   border-radius: 12px;           /* 角丸 */
   background-color: #f0f8ff;     /* 薄い水色で見やすく */
 }
@@ -181,4 +180,21 @@ body {
   border: 3px solid #66bb6a;     /* 緑系の太線（優しい色） */
   border-radius: 12px;
   background-color: #f9fff9;     /* 薄い緑で視認性UP */
+}
+.role-toban {
+  border: 3px solid #0077cc;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.role-sub {
+  border: 3px solid #0077cc;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.role-normal {
+  border: 3px solid #0077cc;
+  padding: 12px;
+  border-radius: 10px;
 }
