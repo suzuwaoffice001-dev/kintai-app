@@ -50,3 +50,8 @@ function calculateWorkTime(start, end) {
   document.getElementById("work-time").value =
     `${hours}時間 ${minutes}分`;
 }
+function disableEnter(e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+  }
+}
