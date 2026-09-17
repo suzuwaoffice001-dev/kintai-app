@@ -1,24 +1,26 @@
 <div class="role-selector">
   <button onclick="setRole('toban')">当番</button>
   <button onclick="setRole('sub')">サブ</button>
-  <button onclick="setRole('ippan')">一般</button>
+  <button onclick="setRole('normal')">通常</button>
 </div>
 
 <div class="container">
   <h1>勤怠アプリ</h1>
 
-  <div id="current-time"></div>
+  <div class="input-block">
+    <label>出勤時間（自動入力）</label>
+    <input type="text" id="start-time" readonly>
+    <button onclick="autoCheckIn()">出勤</button>
+  </div>
 
-  <button id="checkin-btn" onclick="autoCheckIn()">出勤</button>
-
-  <div class="checkout-area">
-    <label>退勤時間</label>
-    <input type="time" id="checkout-time">
+  <div class="input-block">
+    <label>退勤時間（1500 → 15:00）</label>
+    <input type="text" id="end-time">
     <button onclick="manualCheckout()">退勤</button>
   </div>
 
-  <div id="work-time"></div>
-
-  <button onclick="showLog()">ログ</button>
-  <div id="log"></div>
+  <div class="input-block">
+    <label>合計勤務時間</label>
+    <div id="work-time"></div>
+  </div>
 </div>

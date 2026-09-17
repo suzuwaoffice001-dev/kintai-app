@@ -15,10 +15,10 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 }
 
-.checkout-area {
+.input-block {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -27,5 +27,4 @@
 #work-time {
   font-size: 20px;
   font-weight: bold;
-  margin-top: 10px;
 }

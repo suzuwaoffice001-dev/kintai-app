@@ -1,5 +1,5 @@
 let selectedRole = null;
-let checkInTime = null;
+let startTime = null;
 
 // 区分選択
 function setRole(role) {
@@ -10,31 +10,38 @@ function setRole(role) {
 // 出勤（自動入力）
 function autoCheckIn() {
   if (!selectedRole) {
-    alert("先に『当番・サブ・一般』を選んでください");
+    alert("先に『当番・サブ・通常』を選んでください");
     return;
   }
 
-  if (selectedRole === "toban") checkInTime = "08:30";
-  if (selectedRole === "sub") checkInTime = "08:45";
-  if (selectedRole === "ippan") checkInTime = "09:15";
+  if (selectedRole === "toban") startTime = "08:30";
+  if (selectedRole === "sub") startTime = "08:45";
+  if (selectedRole === "normal") startTime = "09:15";
 
-  saveLog("出勤", checkInTime);
-  alert("出勤時間：" + checkInTime);
+  document.getElementById("start-time").value = startTime;
+
+  alert("出勤時間：" + startTime);
 }
 
-// 退勤（手入力）
+// 退勤（1500 → 15:00 に変換）
 function manualCheckout() {
-  const checkout = document.getElementById("checkout-time").value;
+  let raw = document.getElementById("end-time").value;
 
-  if (!checkout) {
+  if (!raw) {
     alert("退勤時間を入力してください");
     return;
   }
 
-  saveLog("退勤", checkout);
-  alert("退勤しました：" + checkout);
+  // 1500 → 15:00 に変換
+  if (raw.length === 4 && !raw.includes(":")) {
+    raw = raw.slice(0, 2) + ":" + raw.slice(2);
+  }
 
-  calculateWorkTime(checkInTime, checkout);
+  document.getElementById("end-time").value = raw;
+
+  alert("退勤しました：" + raw);
+
+  calculateWorkTime(startTime, raw);
 }
 
 // 実労働時間の計算
@@ -53,14 +60,5 @@ function calculateWorkTime(start, end) {
   const minutes = diff % 60;
 
   document.getElementById("work-time").textContent =
-    `実労働時間：${hours}時間 ${minutes}分`;
+    `${hours}時間 ${minutes}分`;
 }
-
-// ログ保存
-function saveLog(type, time) {
-  const logDiv = document.getElementById("log");
-  const entry = document.createElement("div");
-  entry.textContent = `${type}：${time}`;
-  logDiv.appendChild(entry);
-}
-
