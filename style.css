@@ -22,6 +22,7 @@ body {
 
 .role-selector {
   display: flex;
+  flex-direction: column; /* ←縦並びにする *
   gap: 10px;
   margin-bottom: 25px;
 }
